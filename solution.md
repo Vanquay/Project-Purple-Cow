@@ -31,7 +31,10 @@ Deletes Item linked with id in the database.
 - Using a SQL database
 
 ## Nice To Haves
-- Database persisted with Dockerfile through Makefile
+- Database persisted with Dockerfile volumes through Makefile
+```
+Make build
+```
 - Added Actuator for health check
 - Added Swagger documentation
 
