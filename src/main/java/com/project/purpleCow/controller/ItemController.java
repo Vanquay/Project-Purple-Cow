@@ -67,7 +67,7 @@ public class ItemController {
         return new ResponseEntity<>(updatedItem, HttpStatus.CREATED);
     }
 
-    @DeleteMapping(value = "/{id}")
+    @DeleteMapping(value = "/delete/{id}")
     public ResponseEntity<Item> deleteItem(@PathVariable Long id){
         repository.deleteById(id);
 
