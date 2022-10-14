@@ -1,5 +1,5 @@
 # Project Description
-Proof of Concept for a RESTFUL application that carries health supplies from Black Owned Businesses. 
+Proof of Concept adhering with Fearless Values. This repo hosts a RESTFUL application that carries health supplies from Black Owned Businesses.
 
 
 ### Reference Documentation

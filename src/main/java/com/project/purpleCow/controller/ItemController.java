@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.project.purpleCow.models.Item;
 import com.project.purpleCow.repository.ItemRepository;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
 
@@ -26,5 +30,20 @@ public class ItemController {
 
         return new ResponseEntity<List<Item>>(items, HttpStatus.OK);
     }
+
+    @PostMapping(value = "/update-all")
+    public ResponseEntity<List<Item>> setAllItems(@RequestBody List<Item> items){
+        repository.saveAll(items);
+
+        return new ResponseEntity<List<Item>>(HttpStatus.CREATED);
+    }
+
+    @DeleteMapping(value = "/delete-all")
+    public ResponseEntity<List<Item>> deleteAllItems(){
+        repository.deleteAll();
+        
+        return new ResponseEntity<List<Item>>(HttpStatus.OK);
+    }
+
     
 }
