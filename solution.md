@@ -1,6 +1,6 @@
 ## Local development
 
-In order to run the application run the command below and replace `Port` with desired port number
+In order to run the application run the command below and replace `{Port}` with desired port number
 
 ```
 docker build -t purple-cow . && docker run -p {Port}:3000 purple-cow
